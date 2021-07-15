@@ -1,0 +1,117 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+  font-family: Tahoma;
+}
+:root{
+  --hue-neutral:200;
+  --hue-wrong:0;
+  --hue-correct:145;
+}
+
+body{
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin:0;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  background: hsl(var(--hue), 100%, 20%);
+  
+}
+.welcome-quiz{
+  color: whitesmoke;
+  display:flex;
+  margin-top: 20px;
+  margin-left: 500px;
+  margin-right: 200px;
+}
+.quiz-rule{
+  color: whitesmoke;
+  margin-top: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  text-align: center;
+  border: solid white;
+  border-radius: 5px;
+  padding: 5px;
+}
+.game-body{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+body.correct{
+  --hue: var(--hue-correct);
+}
+body.wrong{
+  --hue: var(--hue-wrong);
+}
+.btn-grid{
+  display: grid;
+  gap: 10px;
+  margin: 20px 0;
+}
+.btn{
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var (--hue), 100%, 30%);
+  background-color: hsl(var (--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+  background: #3f5bf8;
+}
+.btn:hover{
+  background: rgb(102, 64, 241);
+}
+.btn.correct{
+  --hue: var(--hue-correct);
+  color:rgb(166, 245, 76)
+}
+.btn.wrong{
+  --hue: var(--hue-correct);
+  color:rgb(247, 84, 84);
+}
+.start-btn, .next-btn{
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.question-container{
+  color:navy;
+  font-weight: bold;
+}
+
+.hide{
+  display: none;
+}
+.quiz_score{
+  color: whitesmoke;
+  margin-top: 270px;
+  margin-bottom: 0px;
+  margin-left: 350px;
+  text-align: left;
+  font-weight: bold;
+  width:30px;
+}
+.quiz_time{
+  color: whitesmoke;
+  margin-top: 2700px;
+  margin-bottom: 0px;
+  margin-left: 350px;
+  text-align: left;
+  font-weight: bold;
+  width:30px;
+}
